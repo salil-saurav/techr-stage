@@ -6,16 +6,17 @@
  * @package WordPress
  */
 ?>
+
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html lang="en">
 
 <head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php the_title() ?></title>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-    <?php wp_body_open(); ?>
+<body>

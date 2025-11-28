@@ -1,0 +1,536 @@
+/*========== Media Query Css ==========*/
+
+
+@media( max-width: 1800px ){
+	
+	header#main_header .custom_header .container{
+		max-width: 100%;
+	}
+	
+	.menu_btn_wrap ul.main_header_menu.navbar-nav > li{
+		margin: 0 10px;
+	}
+	.menu_btn_wrap ul.main_header_menu.navbar-nav > li > a.nav-link{
+		font-size: 16px;
+	}
+	.slider_banner_wrap .banner_img img{
+		max-width: 650px;
+		height: 650px;
+	}
+	.profile_link ul.prlist{
+		margin-left: 15px;
+	}
+	
+	/*===== Category Page Css =====*/
+	
+	.swcategory_list .soft_cat_item .item_inner {
+		height: 250px;
+		width: 250px;
+	}
+	.soft_cat_item.recommend .item_inner h4{
+		font-size: 25px;
+	}
+	
+	
+}
+
+@media( max-width: 1680px ){
+	
+	h1 {
+		font-size: 55px;
+		line-height: 1.2;
+	}
+	h2 {
+		font-size: 48px;
+		line-height: 1.2;
+	}
+
+	h3 {
+		font-size: 38px;
+		line-height: 1.2;
+	}
+	h4 {
+		font-size: 32px;
+		line-height: 1.2;
+	}
+	h5 {
+		font-size: 26px;
+		line-height: 1.2;
+	}
+	h6 {
+		font-size: 20px;
+		line-height: 1.4;
+	}
+		
+	.container { 
+		max-width: 1220px;
+	}
+	
+	.logo_search_wrap .logo{
+		margin-right: 30px;
+	}
+}
+
+@media( max-width: 1480px ){
+	
+	
+	h1 {
+		font-size: 50px;
+		line-height: 1.2;
+	}
+	h2 {
+		font-size: 45px;
+		line-height: 1.2;
+	}
+
+	h3 {
+		font-size: 36px;
+		line-height: 1.2;
+	}
+	h4 {
+		font-size: 30px;
+		line-height: 1.2;
+	}
+	h5 {
+		font-size: 26px;
+		line-height: 1.2;
+	}
+	h6 {
+		font-size: 20px;
+		line-height: 1.4;
+	}
+	
+	.container { 
+		max-width: 1120px;
+	}
+	.vendor_login a.login_btn{
+		padding: 15px 10px 12px 10px;
+	}
+	
+	.slider_banner_wrap .banner_img img {
+        max-width: 550px;
+        height: 550px;
+    }
+    .slider_banner_wrap .banner_img .bann_circle_txt {
+        width: 200px;
+        height: 200px;
+        right: 0px;
+        bottom: -30px;
+    }
+	.slider_banner_wrap .banner_sec span.circle {
+		position: absolute;
+		top: 25px;
+		left: 40%;
+		width: 80px;
+		height: 80px;
+	}
+	.slider_banner_wrap .banner_sec span.circle.circle_2 {
+		top: auto;
+		left: 80px;
+		bottom: 40px;
+	}
+	.slider_banner_wrap .banner_sec .banner_cnt h1{
+		line-height: 1.2;
+	}
+	.software_category_slider {
+		padding: 90px 0 70px;
+	}
+	.software_category_slider .soft_cat_item .item_inner h4{
+		font-size: 22px;
+	}
+	.thr_txt_slider_section .txt_slider .cnt{
+		font-size: 35px;
+	}
+	.thr_review_sec,
+	.thr_about_sec{
+		padding: 70px 0; 
+	}
+	.thr_software_sec{
+		padding: 40px 0;
+	}
+	.thr_software_sec .software_item{
+		padding: 30px 0;
+	}
+	.thr_review_sec .rev_inner_item .client_cnt .quote{
+		height: 65px;
+		width: 65px;
+		font-size: 70px;
+		margin-bottom: 20px;
+	}
+	.thr_review_sec .rev_inner_item .client_img img {
+		width: 385px;
+		height: 385px;
+	}
+	.thr_review_sec .rev_inner_item .client_cnt {
+		width: calc(100% - 385px);
+		padding-left: 45px;
+	}
+	.thr_review_sec .rev_inner_item .client_cnt p {
+		font-size: 24px;
+		line-height: 1.2;
+	}
+}
+
+
+@media( max-width: 1280px ){
+	
+	.profile_link ul.prlist > li > a span.pname,
+	.menu_btn_wrap ul.main_header_menu.navbar-nav > li > a.nav-link {
+        font-size: 14px;
+    }
+	.profile_link ul.prlist > li > a img{
+		height: 28px;
+		width: 28px;
+	}
+	
+	.thr_about_sec .thr_abcnt {
+		padding-left: 40px;
+	}
+}
+
+@media( max-width: 1199px ){
+	
+	.slider_banner_wrap .banner_img img {
+        max-width: 500px;
+        height: 500px;
+    }
+	.slider_banner_wrap .banner_img .bann_circle_txt {
+        width: 150px;
+        height: 150px;
+        right: 60px;
+        bottom: -30px;
+    }
+	
+	/*===== Category Page Css =====*/
+	
+	.swcategory_list .soft_cat_item .item_inner {
+		height: 220px;
+		width: 220px;
+	}
+	.soft_cat_item.recommend .item_inner h4{
+		font-size: 22px;
+	}
+	.swcategory_list .soft_cat_item .item_inner a.cmn_btn {
+		font-size: 14px;
+		padding: 10px 20px;
+	}
+	
+}
+
+@media( max-width: 991px ){
+	
+	
+	header#main_header .custom_header .logo_search_wrap {
+		flex-direction: column;
+		position: relative;
+	}
+	header#main_header .custom_header .logo_search_wrap .logo {
+		max-width: 100%;
+		margin: 0 auto 30px;
+		text-align: center;
+		padding: 0 50px;
+	}
+	header#main_header .custom_header .logo_search_wrap .logo img {
+		max-width: 200px;
+		width: 100%;
+	}
+	
+	.software_category_slider .soft_cat_item .item_inner{
+		margin: 0 auto;
+	}
+	.slider_banner_wrap .banner_img img {
+        max-width: 400px;
+        height: 400px;
+    }
+	
+}
+
+@media( max-width: 767px ){
+	
+	
+	h1 {
+		font-size: 44px;
+		line-height: 1.2;
+	}
+	h2 {
+		font-size: 35px;
+		line-height: 1.2;
+	}
+
+	h3 {
+		font-size: 32px;
+		line-height: 1.2;
+	}
+	h4 {
+		font-size: 28px;
+		line-height: 1.2;
+	}
+	h5 {
+		font-size: 24px;
+		line-height: 1.2;
+	}
+	h6 {
+		font-size: 20px;
+		line-height: 1.4;
+	}
+	.container{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.slider_banner_wrap .banner_sec {
+		overflow: hidden;
+	}
+	.slider_banner_wrap .banner_sec span.circle {
+		height: 122px;
+		width: 122px;
+		left: auto;
+		top: 0;
+		right: -60px;
+	}
+	.slider_banner_wrap .banner_sec span.circle.circle_2 {
+		left: -60px;
+	}
+	.slider_banner_wrap .banner_img .inn_img {
+		text-align: right;
+	}
+	.slider_banner_wrap .banner_img img {
+		display: none;
+	}
+	.slider_banner_wrap .banner_img .bann_circle_txt {
+		position: relative;
+		right: auto;
+		bottom: auto;
+		border: 1px solid #ddd;
+		height: 250px;
+		width: 250px;
+		display: inline-block;
+	}
+	.software_category_slider {
+        padding: 60px 0 50px;
+    }
+	.thr_about_sec .thr_abimg {
+		margin-bottom: 50px;
+	}
+	.thr_about_sec .thr_abcnt{
+		padding: 0;
+	}
+	.thr_review_sec, .thr_about_sec{
+		padding: 50px 0;
+	}
+	.thr_review_sec .rev_inner_item {
+		flex-direction: column;
+	}
+	.thr_review_sec .rev_inner_item .client_img img {
+		height: 280px;
+		width: 280px;
+		margin: 0 auto 35px;
+	}
+	.thr_review_sec .rev_inner_item .client_cnt {
+		width: 100%;
+		padding: 0;
+	}
+	
+	.thr_software_sec .software_item,
+	.thr_software_sec{
+		padding: 25px 0;
+	}
+	.thr_software_sec .software_item:nth-child(odd) .sw_col_cnt {
+		order: 2;
+	}
+	.thr_software_sec .software_item:nth-child(even) .sw_cnt,
+	.thr_software_sec .software_item .sw_cnt {
+		padding: 50px 0 0px;
+	}
+	.email_subscription_sec .sub_cnt{
+		margin-bottom: 40px;
+	}
+	.email_subscription_sec .subscription_form .mainsub_form button.btn.subs_btn i {
+		display: block;
+	}
+	.email_subscription_sec .subscription_form .mainsub_form button.btn.subs_btn .txt{
+		display: none;
+	}
+	.email_subscription_sec .subscription_form .mainsub_form {
+		position: relative;
+	}
+	.email_subscription_sec .subscription_form .mainsub_form input.form-control {
+		padding-right: 65px;
+	}
+	.email_subscription_sec .subscription_form .mainsub_form button.btn.subs_btn {
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		transform: translateY(-50%);
+		height: calc(100% - 8px);
+		padding: 10px;
+		margin: 0;
+	}
+	.footer_top{
+		padding: 30px 0;
+	}
+	.footer_top .foo_logo {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	.footer_top ul.social_list {
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	.footer_bottom {
+		padding: 20px 0 40px;
+	}
+	.footer_bottom .other_menu ul {
+		text-align: center;
+	}
+	.footer_bottom .copyright {
+		text-align: center;
+		padding-top: 25px;
+	}
+	.foo_widget.foo_menu_wrap .foo_title .fm_toggle {
+		position: absolute;
+		top: 5px;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		text-align: right;
+		font-size: 22px;
+		cursor: pointer;
+		display: block;
+	}
+	.foo_widget.foo_menu_wrap .foo_title .fm_toggle i {
+	  transition: 0.3s ease;
+	}
+	.foo_widget.foo_menu_wrap .foo_title .fm_toggle i.rotate {
+	  transform: rotate(180deg);
+	}
+	.foo_widget.foo_menu_wrap {
+		margin-bottom: 10px;
+	}
+	.foo_widget.foo_menu_wrap .menu_wrap {
+		display: none;
+		padding: 20px 0;
+	}
+	.foo_widget.foo_menu_wrap .foo_title {
+		padding: 13px 25px 12px 0;
+		position: relative;
+		border-bottom: 2px solid #fff;
+		cursor: pointer;
+	}
+	.foo_widget.foo_menu_wrap .foo_title h4 {
+		margin: 0;
+		font-size: 18px;
+		line-height: 1;
+		cursor: pointer;
+	}
+	.foo_widget.foo_menu_wrap .foo_title:after {
+		content: "";
+		position: absolute;
+		left: 0;
+	}
+	
+	/*===== Category Page Css =====*/
+	
+	.inner_banner_sec {
+		padding: 20px 0 50px;
+	}
+	.inner_banner_sec .thr_breadcrumb {
+		margin-bottom: 35px;
+	}
+	.inner_banner_sec .thr_breadcrumb ul {
+		text-align: center;
+	}
+	.swcategory_list .soft_cat_item {
+		padding: 0px;
+	}
+	.swcategory_list .soft_cat_item .item_inner {
+		height: 180px;
+        width: 180px;
+        margin: 0px auto 18px;
+	}
+	.soft_cat_item .item_inner h4{
+		font-size: 21px;
+	}
+	.soft_cat_item.recommend .item_inner h4{
+		font-size: 18px;
+	}
+	.swcategory_list .soft_cat_item .item_inner a.cmn_btn {
+		font-size: 13px;
+		padding: 10px 15px;
+	}
+	.inpg_cat_wrap .cat_filter_wrap form.filter_cat button.sub_btn span.txt {
+		display: none;
+	}
+	.inpg_cat_wrap .cat_filter_wrap form.filter_cat button.sub_btn {
+		width: 42px;
+		height: calc(100% - 18px);
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 20px;
+	}
+	.inpg_cat_wrap .cat_filter_wrap input.form-control {
+		padding: 13px 90px 13px 58px;
+	}
+	.inpg_cat_wrap .cat_filter_wrap {
+		margin: 0px auto 50px;
+		top: 0;
+	}
+	.thrrcommendModal {
+		padding: 20px;
+	}
+	.thrrcommendModal .modal-content button.btn-close {
+		width: 65px;
+		height: 50px;
+		font-size: 20px;
+	}
+	.thrrcommendModal .modal-content {
+		padding: 40px 70px 40px 40px;
+	}	
+	.thrrcommendModal .modal-content form.pop_recommend_form button.btn.btn-pill {
+		padding: 15px 35px;
+	}	
+	.inner_banner_sec span.circle,
+	.inner_banner_sec span.circle.circle_2 {
+		display: none;
+	}
+}
+
+@media( max-width: 440px ){
+	
+	/*===== Category Page Css =====*/
+	
+	.swcategory_list .pg_catcol {
+		flex: 0 0 auto;
+		width: 100%;
+	}
+	.swcategory_list .soft_cat_item .item_inner {
+		height: 220px;
+        width: 220px;
+        margin: 0px auto 18px;
+	}
+	.thrrcommendModal .modal-content button.btn-close {
+		width: 50px;
+        height: 40px;
+		font-size: 16px;
+	}
+	.thrrcommendModal .modal-content {
+		padding: 40px 30px;
+	}	
+}
+
+@media( max-width: 380px ){
+	
+	
+	.thr_review_sec .rev_inner_item .client_img img {
+		height: 220px;
+		width: 220px;
+	}
+	.software_category_slider .soft_cat_item .item_inner{
+		 height: 200px;
+		width: 200px;
+		padding: 20px;
+	}
+	
+	
+}
