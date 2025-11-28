@@ -7,7 +7,6 @@ if (!defined('ABSPATH')) exit;
  */
 
 get_header();
-
 ?>
 
 <header id="main_header">

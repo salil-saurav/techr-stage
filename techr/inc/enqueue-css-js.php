@@ -40,7 +40,7 @@ class Theme_Asset_Manager
         $this->add_css('slick_theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css');
         $this->add_css('font_awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
         $this->add_css('main_style', get_stylesheet_directory_uri() . '/assets/global/css/style.css');
-        $this->add_css('media', get_stylesheet_directory_uri() . '/assets/global/css/media.css');
+        $this->add_css('global_media', get_stylesheet_directory_uri() . '/assets/global/css/media.css');
 
         // JavaScript Assets
         $this->add_js('jquery_js', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js');

@@ -15,11 +15,11 @@ class Custom_Post_Types_Manager {
      * @var array
      */
     private $post_types = [
-        // 'portfolio' => [
-        //     'menu_icon' => 'dashicons-portfolio',
-        //     'taxonomies' => ['portfolio-category'],
-        //     'supports' => ['title', 'editor', 'thumbnail', 'excerpt']
-        // ],
+        'directory' => [
+            'menu_icon' => 'dashicons-portfolio',
+            // 'taxonomies' => ['portfolio-category'],
+            'supports' => ['title', 'editor', 'thumbnail', 'excerpt']
+        ],
     ];
 
     /**

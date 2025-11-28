@@ -23,7 +23,6 @@ foreach (glob(__DIR__ . '/components/utility/*.php') as $utility_files) {
     require_once $utility_files;
 }
 
-
 /**
  * Require Meta fields
  */
