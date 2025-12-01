@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) exit;
  * Require inc files
  */
 
-foreach (glob(__DIR__ . '/inc/*.php') as $file) {
+foreach (glob(__DIR__ . '/includes/*.php') as $file) {
     require_once $file;
 }
 
@@ -27,4 +27,5 @@ foreach (glob(__DIR__ . '/components/utility/*.php') as $utility_files) {
  * Require Meta fields
  */
 
-require_once __DIR__ . '/meta-fields/acf/theme-option.php';
+require_once __DIR__ . '/meta-fields/theme-option.php';
+require_once __DIR__ . '/meta-fields/meta-index.php';
