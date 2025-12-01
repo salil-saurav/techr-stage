@@ -208,11 +208,12 @@ $cpt_config = [
         ]
     ],
     // You can easily add another CPT here
-    'event' => [
-        'singular' => 'Event',
-        'plural'   => 'Events',
+    'testimonial' => [
+        'singular' => 'Testimonial',
+        'plural'   => 'Testimonials',
         'args'     => [
-            'menu_icon' => 'dashicons-calendar-alt',
+            'menu_icon' => 'dashicons-testimonial',
+            'supports'  => ['title', 'editor', 'thumbnail'],
         ]
     ]
 ];
