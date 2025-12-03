@@ -40,7 +40,6 @@ get_header(); ?>
             <button class="sub_btn" type="submit"><span class="txt">Go</span> <span>&#10230;</span></button>
          </form>
       </div>
-
    </div>
    <div class="swcategory_list">
       <div class="container">
@@ -56,8 +55,6 @@ get_header(); ?>
             </div>
 
             <?php
-
-
             $query = new WP_Term_Query([
                'taxonomy'   => 'software-category',
                'hide_empty' => false,
@@ -69,13 +66,12 @@ get_header(); ?>
             if (!is_wp_error($software_categories) && !empty($software_categories)):
                foreach ($software_categories as $category):
             ?>
-
                   <div class="col-lg-3 col-md-4 col-sm-6 col-6 pg_catcol">
                      <div class="soft_cat_item">
                         <div class="item_inner">
                            <h4><?= esc_html($category->name) ?></h4>
                            <p>25 tools</p>
-                           <a href="<?= get_term_link($category) ?>" class="btn_icon"><span>&#10230;</span></a>
+                           <a href="<?= esc_url(get_term_link($category)) ?>" class="btn_icon"><span>&#10230;</span></a>
                         </div>
                      </div>
                   </div>
@@ -115,19 +111,10 @@ get_header(); ?>
                               affiliates. View all items.</span></label>
                      </div>
                   </form>
-
                </div>
             </div>
          </div>
       </div>
    </div>
 </div>
-
-<script>
-   function handleCategoryFilter(input) {
-      const value = input.value.toLowerCase().trim();
-
-   }
-</script>
-
 <?php get_footer();

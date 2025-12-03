@@ -183,7 +183,7 @@ $cpt_config = [
             'features' => [
                 'singular' => 'Feature',
                 'plural'   => 'Features',
-                'args'     => ['hierarchical' => false]
+                'args'     => ['hierarchical' => true]
             ],
             'deployment' => [
                 'singular' => 'Deployment',
@@ -204,7 +204,27 @@ $cpt_config = [
                 'singular' => 'Pricing Model',
                 'plural'   => 'Pricing Model',
                 'args'     => ['hierarchical' => false]
-            ]
+            ],
+            'platform' => [
+                'singular' => 'Platform',
+                'plural'   => 'Platforms',
+                'args'     => ['hierarchical' => false]
+            ],
+            'browser' => [
+                'singular' => 'Browser',
+                'plural'   => 'Browsers',
+                'args'     => ['hierarchical' => false]
+            ],
+            'training' => [
+                'singular' => 'Training',
+                'plural'   => 'Training',
+                'args'     => ['hierarchical' => false]
+            ],
+            'support' => [
+                'singular' => 'Support',
+                'plural'   => 'Support',
+                'args'     => ['hierarchical' => false]
+            ],
         ]
     ],
     // You can easily add another CPT here
