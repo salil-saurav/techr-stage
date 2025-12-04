@@ -40,7 +40,8 @@ add_action('admin_post_nopriv_upload_xlsx', 'handle_xlsx_upload_unauthorized');
 /**
  * Handle unauthorized access
  */
-function handle_xlsx_upload_unauthorized() {
+function handle_xlsx_upload_unauthorized()
+{
     wp_die(
         __('You do not have permission to upload files.', 'techr'),
         __('Unauthorized', 'techr'),
@@ -106,7 +107,7 @@ function map_acf_fields_with_xlsx($data)
     $fields_mapping = [
         'field_directory_video_url'      => 'video',
         'field_directory_minimum_price'  => 'minimumPrice',
-        'field_directory_pricing_details'=> 'pricingDetails',
+        'field_directory_pricing_details' => 'pricingDetails',
         'field_directory_website'        => 'website',
         'field_directory_rating'         => 'rating',
         'field_directory_review_count'   => 'reviewCount',
@@ -272,24 +273,80 @@ function handle_xlsx_upload()
     }
 
     // Process the data
-    $results = map_acf_fields_with_xlsx($data);
+    // $results = map_acf_fields_with_xlsx($data);
 
-    // Redirect with success/error message
-    $redirect_url = add_query_arg([
-        'page'    => 'techr-import', // Adjust to your admin page slug
-        'success' => $results['success'],
-        'failed'  => $results['failed'],
-        'message' => 'import_complete',
-    ], admin_url('admin.php'));
+    echo '<pre>';
+    print_r($data);
+    echo '</pre>';
 
-    // Store errors in transient for display
-    if (!empty($results['errors'])) {
-        set_transient('xlsx_import_errors', $results['errors'], 60);
-    }
+    handle_taxonomy_creation($data);
 
-    wp_safe_redirect($redirect_url);
-    exit;
+    // // Redirect with success/error message
+    // $redirect_url = add_query_arg([
+    //     'page'    => 'techr-import', // Adjust to your admin page slug
+    //     'success' => $results['success'],
+    //     'failed'  => $results['failed'],
+    //     'message' => 'import_complete',
+    // ], admin_url('admin.php'));
+
+    // // Store errors in transient for display
+    // if (!empty($results['errors'])) {
+    //     set_transient('xlsx_import_errors', $results['errors'], 60);
+    // }
+
+    // wp_safe_redirect($redirect_url);
+    // exit;
 }
+
+
+function handle_taxonomy_creation(array $items): void
+{
+    foreach ($items as $item) {
+
+        // Skip invalid entries early
+        if (
+            empty($item['group']) ||
+            empty($item['slug'])  ||
+            empty($item['name'])
+        ) {
+            continue;
+        }
+
+        $taxonomy = $item['group'];
+        $slug     = sanitize_title($item['slug']);
+        $name     = sanitize_text_field($item['name']);
+
+        // Validate taxonomy existence
+        if (!taxonomy_exists($taxonomy)) {
+            error_log("handle_taxonomy_creation: Taxonomy '{$taxonomy}' does not exist.");
+            continue;
+        }
+
+        // Check if term already exists
+        $existing = get_term_by('slug', $slug, $taxonomy);
+        if ($existing instanceof WP_Term) {
+            continue;
+        }
+
+        // Insert term
+        $result = wp_insert_term($name, $taxonomy, [
+            'slug' => $slug,
+        ]);
+
+        // Log WP_Error if needed
+        if (is_wp_error($result)) {
+            error_log(
+                sprintf(
+                    "handle_taxonomy_creation: Failed inserting '%s' into '%s' — %s",
+                    $name,
+                    $taxonomy,
+                    $result->get_error_message()
+                )
+            );
+        }
+    }
+}
+
 
 /**
  * Display import results admin notice

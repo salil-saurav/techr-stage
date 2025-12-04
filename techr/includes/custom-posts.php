@@ -200,17 +200,17 @@ $cpt_config = [
                 'plural'   => 'License',
                 'args'     => ['hierarchical' => false]
             ],
-            'pricing-model' => [
+            'pricing_model' => [
                 'singular' => 'Pricing Model',
                 'plural'   => 'Pricing Model',
                 'args'     => ['hierarchical' => false]
             ],
-            'platform' => [
+            'platforms' => [
                 'singular' => 'Platform',
                 'plural'   => 'Platforms',
                 'args'     => ['hierarchical' => false]
             ],
-            'browser' => [
+            'browsers' => [
                 'singular' => 'Browser',
                 'plural'   => 'Browsers',
                 'args'     => ['hierarchical' => false]
@@ -223,7 +223,12 @@ $cpt_config = [
             'support' => [
                 'singular' => 'Support',
                 'plural'   => 'Support',
-                'args'     => ['hierarchical' => false]
+                'args'     => ['hierarchical' => true]
+            ],
+            'industries' => [
+                'singular' => 'Industry',
+                'plural'   => 'Industries',
+                'args'     => ['hierarchical' => true]
             ],
         ]
     ],
