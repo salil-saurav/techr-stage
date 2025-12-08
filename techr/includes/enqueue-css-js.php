@@ -48,6 +48,7 @@ class Theme_Asset_Manager
         $this->add_js('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js');
         // $this->add_js('dom_js', get_stylesheet_directory_uri() . '/assets/js/DOM.js');
         $this->add_js('main_js', get_stylesheet_directory_uri() . '/assets/global/scripts/custom.js');
+        $this->add_js('dom_js', get_stylesheet_directory_uri() . '/assets/global/scripts/dom.js');
     }
 
     public function add_css($handle, $url, $dependencies = [], $media = 'all')

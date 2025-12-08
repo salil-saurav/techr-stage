@@ -65,12 +65,14 @@ get_header(); ?>
 
             if (!is_wp_error($software_categories) && !empty($software_categories)):
                foreach ($software_categories as $category):
+                  $tool_number = (int) $category->count;
+
             ?>
                   <div class="col-lg-3 col-md-4 col-sm-6 col-6 pg_catcol">
                      <div class="soft_cat_item">
                         <div class="item_inner">
                            <h4><?= esc_html($category->name) ?></h4>
-                           <p>25 tools</p>
+                           <p><?= $tool_number ?> tools</p>
                            <a href="<?= esc_url(get_term_link($category)) ?>" class="btn_icon"><span>&#10230;</span></a>
                         </div>
                      </div>
