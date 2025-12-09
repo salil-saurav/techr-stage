@@ -82,16 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let selectedPosts = stored ? new Set(JSON.parse(stored)) : new Set();
 
     const buildCompareUrl = (selectedPosts) => {
-        const compareUrl = new URL(compareBtn.href);
-
-        for (const slug of selectedPosts) {
-            compareUrl.searchParams.append('vs', slug);
+        if (selectedPosts.size) {
+            const slugs = Array.from(selectedPosts).join('-vs-');
+            compareBtn.href = `${window.location.origin}/compare/${slugs}`;
         }
-
-        compareBtn.href = compareUrl.href;
-
-
     }
+
+    buildCompareUrl(selectedPosts);
 
     // Restore checkboxes on load
     selectedPosts.forEach(slug => {

@@ -17,7 +17,7 @@ const TAX_CONFIG = [
 
 $directory_args = [
    'post_type' => TAX_CONFIG['post_type'],
-   'posts_per_page' => -1,
+   'posts_per_page' => TAX_CONFIG['default_posts'],
    'orderby' => 'date',
    'order' => 'DESC'
 ];

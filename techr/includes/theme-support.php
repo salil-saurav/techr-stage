@@ -37,3 +37,22 @@ function add_file_types_to_uploads($file_types)
    return $file_types;
 }
 add_filter('upload_mimes', 'add_file_types_to_uploads');
+
+// Add rewrite rule for compare URLs
+function custom_compare_rewrite_rules()
+{
+   add_rewrite_rule(
+      '^compare/([^/]+)/?$',
+      'index.php?pagename=compare&compare_items=$matches[1]',
+      'top'
+   );
+}
+add_action('init', 'custom_compare_rewrite_rules');
+
+// Add query var
+function custom_compare_query_vars($vars)
+{
+   $vars[] = 'compare_items';
+   return $vars;
+}
+add_filter('query_vars', 'custom_compare_query_vars');
